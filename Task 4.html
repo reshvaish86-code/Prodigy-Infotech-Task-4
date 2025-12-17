@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00adb5;
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        /* Home Section */
+        #home {
+            background: linear-gradient(to right, #00adb5, #393e46);
+            color: white;
+            padding-top: 120px;
+        }
+
+        #home img {
+            width: 150px;
+            border-radius: 50%;
+            margin: 20px 0;
+            border: 4px solid white;
+        }
+
+        #home h1 {
+            font-size: 2.5rem;
+        }
+
+        #home p {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* About Section */
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        /* Skills */
+        #skills {
+            background: #eeeeee;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #00adb5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        /* Projects */
+        #projects {
+            background: white;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .project-card {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Contact */
+        #contact {
+            background: #222;
+            color: white;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home">
+    <h1>Hello, I'm a Web Developer</h1>
+    <img src="https://via.placeholder.com/150" alt="Profile Photo">
+    <p>
+        I am a passionate web developer skilled in building responsive and user-friendly
+        websites using modern web technologies.
+    </p>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+        <p><strong>Background:</strong> I am a dedicated web developer with a strong interest in
+        designing and developing interactive web applications.</p>
+
+        <p><strong>Education:</strong> Currently pursuing a degree in Computer Science /
+        Information Technology.</p>
+
+        <p><strong>Professional Experience:</strong> Hands-on experience through internships
+        and academic projects involving front-end and basic back-end development.</p>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Git & GitHub</div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>Responsive Landing Page</h3>
+            <p>A mobile-friendly landing page using HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Stopwatch Web App</h3>
+            <p>A stopwatch application with start, stop, and reset features.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Tic Tac Toe Game</h3>
+            <p>An interactive two-player tic tac toe game using JavaScript.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: yourname@email.com</p>
+    <p>Phone: +91 XXXXX XXXXX</p>
+</section>
+
+<footer>
+    <p>© 2025 Personal Portfolio | Designed by You</p>
+</footer>
+
+<script>
+    // Smooth scroll effect
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href'))
+                .scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+</body>
+</html>
